@@ -10,7 +10,8 @@
 
 ## Licenses
 * * *
-openCV <br>
+### openCV <br>
+
 ```
 By downloading, copying, installing or using the software you agree to this license.
 If you do not agree to this license, do not download, install,
@@ -29,10 +30,11 @@ Copyright (C) 2015-2016, OpenCV Foundation, all rights reserved.
 Copyright (C) 2015-2016, Itseez Inc., all rights reserved.
 Third party copyrights are property of their respective owners.
 
-``` <br>
-tesseract
 ```
-The code in this repository is licensed under the Apache License, Version 2.0 (the "License");
+
+### tesseract
+```
+The code in this repository is licensed under the Apache License, Version 2.0 (the "License")
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
@@ -43,7 +45,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-``` <br>
+```
+<br>
 This project is licensed under these open source licenses <br><br><br>
 
 ## Members <br>
