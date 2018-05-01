@@ -15,11 +15,15 @@
 * * *
 ### 영상에서의 문자 인식
 <br>
+
+<img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
+<br>
 동작 예시 영상 <https://www.youtube.com/watch?v=Yv6IkGRQIWk>
 
 <br>
-
-![Figure_01](C:\Users\hyper\Documents\카카오톡 받은 파일\사진.png)
+<img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
+<br>
+선수의 이름을 인식하여 DB로부터 정보를 가져온다
 
 <br><br>
 
