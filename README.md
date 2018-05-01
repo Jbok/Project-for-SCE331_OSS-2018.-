@@ -19,7 +19,7 @@
 
 <br>
 
-![pic](C:\Users\hyper\Documents\카카오톡 받은 파일\사진.png)
+![Figure_01](C:\Users\hyper\Documents\카카오톡 받은 파일\사진.png)
 
 <br><br>
 
