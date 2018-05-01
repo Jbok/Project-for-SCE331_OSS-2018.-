@@ -13,16 +13,13 @@
 
 ## How it works
 * * *
-1. 영상에서의 문자 인식
+### 영상에서의 문자 인식
 <br>
-<https://www.youtube.com/watch?v=Yv6IkGRQIWk>
-![pic](/Users/taeklim.kim/Desktop/OSS/hw1.jpg)
-![pic2]()
+동작 예시 영상 <https://www.youtube.com/watch?v=Yv6IkGRQIWk>
 
 <br>
-2.  
 
-3. 
+![pic](/Users/taeklim.kim/Desktop/1.png)
 
 <br><br>
 
