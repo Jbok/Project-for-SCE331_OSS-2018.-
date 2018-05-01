@@ -19,7 +19,7 @@
 
 <br>
 
-![pic](/Users/taeklim.kim/Desktop/1.png)
+![pic](C:\Users\hyper\Documents\카카오톡 받은 파일\사진.png)
 
 <br><br>
 
