@@ -24,6 +24,20 @@
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
 <br>
 선수의 이름을 인식하여 DB로부터 정보를 가져온다
+<br>
+<img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
+<br>
+각종 stat을 확인할 수 있는 웹서비스에서 scraping하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달함 <br>
+ex) STATIZ <http://www.statiz.co.kr/main.php>
+
+<br><br>
+
+## Tools
+
+- C++
+- Python
+- Javascript
+- node.js
 
 <br><br>
 
