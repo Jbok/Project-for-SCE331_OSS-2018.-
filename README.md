@@ -36,8 +36,9 @@ ex) STATIZ <http://www.statiz.co.kr/main.php>
 
 - C++
 - Python
-- Javascript
-- node.js
+- django
+- javascript
+- html
 
 <br><br>
 
