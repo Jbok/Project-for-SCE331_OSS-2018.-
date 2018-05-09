@@ -42,12 +42,12 @@ int main(int argc, char* argv[]) {
     // print found text
     printf("found text1: \n");
     printf("%s \n", text1);
-    printf("\n");
 
     printf("found text2: \n");
     printf("%s \n", text2);
-    printf("\n");
 
+    myOCR->Clear();
+    myOCR->End();
 
     return 0;
 }
