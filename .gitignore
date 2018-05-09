@@ -1,4 +1,4 @@
 ## Frame Capture Ignore file ##
 
 #ignore all files in the sample_frame_image dir
-sample_frame_image/
+src_framedivision/sample_frame_image/
