@@ -33,11 +33,13 @@ def main():
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
      
         if ret == True:
-            OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR, 'image_%09d.jpg' % (cnt))
-            print("Now %d-th images being processed..." % (cnt))
-    
-            # save image
-            plt.imsave(OUTPUT_IMAGE_PATH, frame)
+            # Capture only 1/10 frame
+            if (int(cap.get(1)) % 10 == 0):
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR, 'image_%09d.jpg' % (cnt))
+                print("Now %d-th images being processed..." % (cnt))
+        
+                # save image
+                plt.imsave(OUTPUT_IMAGE_PATH, frame)
      
         # Break the loop
         else: 
