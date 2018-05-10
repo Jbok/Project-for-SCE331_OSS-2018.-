@@ -26,6 +26,7 @@
 #### _Tesseract_
 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식한다. <br>
 해당 프로젝트에서는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br>
+
 #### _openCV_
 image processing <br>
 
@@ -47,8 +48,10 @@ image processing <br>
 <br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
 <br>
-각종 stat을 확인할 수 있는 웹서비스에서 scraping하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달함 <br>
-ex) STATIZ <http://www.statiz.co.kr/main.php>
+각종 stat을 확인할 수 있는 웹서비스에서 scraping하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달한다. <br>
+각종 통계자료를 확인할 수 있는 **참고사이트 목록**은 아래에 있다.
+1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
+2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
 
 <br><br>
 
