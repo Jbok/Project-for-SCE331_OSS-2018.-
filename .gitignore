@@ -2,3 +2,4 @@
 
 #ignore all files in the sample_frame_image dir
 src_framedivision/sample_frame_image/
+*
