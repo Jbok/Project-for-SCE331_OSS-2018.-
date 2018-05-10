@@ -1,21 +1,38 @@
-# KBO: Knocking Baseball by Opensource <br><br>
+# **KBO: Knocking Baseball by Opensource**
 
-## About
+<br><br><br>
+
+## **About**
 * * *
-해당 프로젝트는 openCV와 Tesseract 오픈소스를 사용하여 야구 생중계 화면에서 문자를 인식한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.<br><br>
+해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용**하여 야구 생중계 화면에서 **문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
 
-## Overview
+<br><br>
+
+## **Overview**
 * * *
 현재 인기 스포츠인 야구는 다른 스포츠와 달리 통계와 데이터 분석 능력의 발전으로 과학적이고 세부적인 접근이 가능해졌다. <br>
 시청자들은 중계시스템의 향상으로 다양한 수치들을 볼 수 있게 되었지만, 더 세부적이고 입맛에 맞는 데이터를 실시간으로 받아보기 힘든 경우가 많다. <br>
 따라서 아래와 같은 과정을 거쳐 시청자가 세부적인 데이터를 실시간으로 받아볼 수 있는 시스템을 제공하는 것이 KBO의 목적이다. <br>
 1) openCV 와 Tesseract 오픈소스를 이용하여 생중계 화면에 대해 문자 인식을 하여 현재 경기 상황에 대한 실시간 정보를 얻는다. <br>
 2) 기존에 가지고 있는 DB를 통하여 현 경기 상황에 대해 시청자가 바로 알지 못한 통계적 수치를 분석한다. <br>
-3) 이렇게 얻어진 수치를 다시 웹을 통해 시청자한테 전달함으로써 시청자가 세부적인 데이터에 빠르게 접근할 수 있게 만든다. <br><br>
+3) 이렇게 얻어진 수치를 다시 웹을 통해 시청자한테 전달함으로써 시청자가 세부적인 데이터에 빠르게 접근할 수 있게 만든다.
 
-## How it works
+<br><br>
+
+## **Need to improvement (개선점)**
 * * *
-### 영상에서의 문자 인식
+해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br>
+#### _Tesseract_
+기존의 Tesseract 오픈소스는 사진 속의 문자를 인식한다. <br>
+해당 프로젝트에서는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br>
+#### _openCV_
+주어진 영상을 프레임 단위로 나누어준다. <br>
+
+<br><br>
+
+## **How it works**
+* * *
+#### 영상에서의 문자 인식
 <br>
 
 <img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
@@ -34,8 +51,8 @@ ex) STATIZ <http://www.statiz.co.kr/main.php>
 
 <br><br>
 
-## Tools
-
+## **Tools**
+* * *
 - C++
 - Python (django)
 - node.js
@@ -44,9 +61,9 @@ ex) STATIZ <http://www.statiz.co.kr/main.php>
 
 <br><br>
 
-## Licenses
+## **Licenses**
 * * *
-### openCV <br>
+#### openCV
 
 ```
 By downloading, copying, installing or using the software you agree to this license.
@@ -68,7 +85,7 @@ Third party copyrights are property of their respective owners.
 
 ```
 
-### tesseract
+#### Tesseract
 ```
 The code in this repository is licensed under the Apache License, Version 2.0 (the "License")
 you may not use this file except in compliance with the License.
@@ -83,9 +100,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 <br>
-This project is licensed under these open source licenses <br><br><br>
+This project is licensed under these open source licenses.
 
-## Members <br>
+<br><br>
+
+## **Members**
 * * *
 권민지 김필선 김택림 이주복
 <br><br>
