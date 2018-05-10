@@ -34,7 +34,7 @@ image processing <br>
 
 ## How it works
 * * *
-#### 영상에서의 문자 인식
+#### 1. 영상에서의 문자 인식
 <br>
 
 <img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
@@ -44,7 +44,7 @@ image processing <br>
 <br>
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
 <br>
-선수의 이름을 인식하여 DB로부터 정보를 가져온다 <br>
+#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다 <br>
 <br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
 <br>
