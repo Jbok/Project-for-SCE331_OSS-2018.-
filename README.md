@@ -2,13 +2,13 @@
 
 <br><br><br>
 
-## About
+## **About**
 * * *
 해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용**하여 야구 생중계 화면에서 **문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
 
 <br><br>
 
-## Overview
+## **Overview**
 * * *
 현재 인기 스포츠인 야구는 다른 스포츠와 달리 통계와 데이터 분석 능력의 발전으로 과학적이고 세부적인 접근이 가능해졌다. <br>
 시청자들은 중계시스템의 향상으로 다양한 수치들을 볼 수 있게 되었지만, 더 세부적이고 입맛에 맞는 데이터를 실시간으로 받아보기 힘든 경우가 많다. <br>
@@ -20,7 +20,7 @@
 
 <br><br>
 
-## Need to improvement (개선점)
+## **Need to improvement (개선점)**
 * * *
 해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br>
 #### _Tesseract_
@@ -32,7 +32,7 @@ image processing <br>
 
 <br><br>
 
-## How it works
+## **How it works**
 * * *
 #### 1. 영상에서의 문자 인식
 <br>
@@ -54,11 +54,11 @@ image processing <br>
 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
 
 <br>
-#### 3. DB로부터 얻어진 수치를 웹을 통해 전달한다
+#### 3. DB로부터 얻은 수치를 웹을 통해 전달한다
 
 <br><br>
 
-## Tools
+## **Tools**
 * * *
 - C++
 - Python (django)
@@ -68,7 +68,7 @@ image processing <br>
 
 <br><br>
 
-## Licenses
+## **Licenses**
 * * *
 #### openCV
 
@@ -111,7 +111,7 @@ This project is licensed under these open source licenses.
 
 <br><br>
 
-## Members
+## **Members**
 * * *
 권민지 김필선 김택림 이주복
 <br><br>
