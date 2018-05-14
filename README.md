@@ -52,6 +52,7 @@ image processing <br>
 각종 통계자료를 확인할 수 있는 **참고사이트 목록**은 아래에 있다.
 1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
+3. [KBReport](http://www.kbreport.com/main "한국 프로야구 통계 사이트")
 
 <br>
 #### 3. DB로부터 얻은 수치를 웹을 통해 전달한다
