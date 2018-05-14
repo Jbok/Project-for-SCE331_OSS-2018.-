@@ -4,7 +4,9 @@
 
 ## **About**
 * * *
-해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용**하여 야구 생중계 화면에서 **문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
+해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용**하여 야구 생중계 화면에서 **문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.<br><br>
+<img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br>
+<img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%">
 
 <br><br>
 
