@@ -11,14 +11,16 @@ from matplotlib import pyplot as plt
  
 ###############################################################################
 # parameters defined by user
-PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\vfc_sample_1.mp4'
-PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image'
+PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
+VIDEO_NAME = 'vfc_sample_2'
+VIDEO_EXTENSION = '.mp4'
+PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
 ###############################################################################
  
 def main():
     # Create a VideoCapture object and read from input file
     # If the input is the camera, pass 0 instead of the video file name
-    cap = cv2.VideoCapture(PATH_TO_INPUT_VIDEO_PATH)
+    cap = cv2.VideoCapture(PATH_TO_INPUT_VIDEO_PATH + VIDEO_NAME + VIDEO_EXTENSION)
      
     # Check if camera opened successfully
     if (cap.isOpened()== False): 
@@ -26,17 +28,24 @@ def main():
      
     # Read until video is completed
     cnt = 0
+    
+    #make folder to save frame if there is no exisiting folder about video file
+    if not os.path.isdir(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME):
+       os.mkdir(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME)
+        
+    
     while(cap.isOpened()):
         # Capture frame-by-frame
         ret, frame = cap.read()
         
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-     
+        
         if ret == True:
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR, 'image_%09d.jpg' % (cnt))
-                print("Now %d-th images being processed..." % (cnt))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
+                print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
                 plt.imsave(OUTPUT_IMAGE_PATH, frame)
@@ -53,4 +62,3 @@ def main():
  
 if __name__ == '__main__':
     main()
-Colored
