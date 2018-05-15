@@ -40,12 +40,12 @@ image processing <br>
 <br>
 
 <img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
-(▲ 동작 예시 영상 <https://www.youtube.com/watch?v=Yv6IkGRQIWk>)
+(▲ 동작 예시 영상 : <https://www.youtube.com/watch?v=Yv6IkGRQIWk>)
 <br><br>
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
 (▲ 야구 생중계 화면에서 선수의 이름을 인식하는 모습 - 예상)
 <br><br>
-#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다
+#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
 <br><br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
 (▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
@@ -59,7 +59,7 @@ image processing <br>
 5. [야구친구](http://www.yachin.co.kr/ "과거에 했던 경기 또는 오늘 경기에서의 선수들 기록, 실시간 승리 확률 그래프 등을 확인 가능")
 
 <br>
-#### 3. DB로부터 얻은 수치를 웹을 통해 전달한다
+#### 3. DB로부터 얻은 수치를 웹을 통해 전달한다.
 
 <br><br>
 
