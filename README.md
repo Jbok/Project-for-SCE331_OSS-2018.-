@@ -40,10 +40,8 @@ image processing <br>
 <br>
 
 <img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
-<br>
-동작 예시 영상 <https://www.youtube.com/watch?v=Yv6IkGRQIWk>
-
-<br>
+(▲ 동작 예시 영상 <https://www.youtube.com/watch?v=Yv6IkGRQIWk>)
+<br><br>
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
 (▲ 야구 생중계 화면에서 선수의 이름을 인식하는 모습 - 예상)
 <br><br>
