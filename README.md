@@ -45,12 +45,14 @@ image processing <br>
 
 <br>
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
-<br>
-#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다 <br>
-<br>
+(▲ 야구 생중계 화면에서 선수의 이름을 인식하는 모습 - 예상)
+<br><br>
+#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다
+<br><br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
-<br>
-각종 stat을 확인할 수 있는 웹서비스에서 scraping하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달한다. <br>
+(▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
+<br><br>
+각종 통계자료를 확인할 수 있는 웹 서비스에서 crawling하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달한다. <br>
 각종 통계자료를 확인할 수 있는 **참고사이트 목록**은 아래에 있다.
 1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
