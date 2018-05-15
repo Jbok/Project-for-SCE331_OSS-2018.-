@@ -4,7 +4,7 @@
 
 ## **About**
 * * *
-해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용**하여 야구 생중계 화면에서 **문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
+해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용하여 야구 생중계 화면에서 문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
 
 <br><br>
 
@@ -55,6 +55,8 @@ image processing <br>
 1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
 3. [KBReport](http://www.kbreport.com/main "한국 프로야구 통계 사이트")
+4. [네이버 기록실](http://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo&year=2018 "가장 기본적인 정보를 확인가능한 네이버 포탈 내의 야구 통계자료 사이트")
+5. [야구친구](http://www.yachin.co.kr/ "과거에 했던 경기 또는 오늘 경기에서의 선수들 기록, 실시간 승리 확률 그래프 등을 확인 가능")
 
 <br>
 #### 3. DB로부터 얻은 수치를 웹을 통해 전달한다
