@@ -6,8 +6,8 @@
 * * *
 - About
 - Overview
-- Need to improvement (개선점)
 - How it works
+- Need to improvement (개선점)
 - How to use (사용법) example 포함 예정
 - Tools
 - Licenses
@@ -33,22 +33,6 @@
 1) openCV 와 Tesseract 오픈소스를 이용하여 생중계 화면에 대해 문자 인식을 하여 현재 경기 상황에 대한 실시간 정보를 얻는다. <br>
 2) 기존에 가지고 있는 DB를 통하여 현 경기 상황에 대해 시청자가 바로 알지 못한 통계적 수치를 분석한다. <br>
 3) 이렇게 얻어진 수치를 다시 웹을 통해 시청자한테 전달함으로써 시청자가 세부적인 데이터에 빠르게 접근할 수 있게 만든다.
-* * *
-<br><br><br>
-
-
-## **Need to improvement**
-* * *
-해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br><br>
-> ### **_Tesseract_**
-> <br> <img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%"> <br><br>
-> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. <br>
-> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br><br>
-> ### **_openCV_**
-> <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
-> - image processing <br>
-> - frame division
-
 * * *
 <br><br><br>
 
@@ -90,6 +74,22 @@
 
 <br><br><br>
 #### 3. DB로부터 얻은 수치를 (그대로 or 가공해서) 웹을 통해 전달한다.
+
+* * *
+<br><br><br>
+
+
+## **Need to improvement**
+* * *
+해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br><br>
+> ### **_Tesseract_**
+> <br> <img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%"> <br><br>
+> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. <br>
+> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br><br>
+> ### **_openCV_**
+> <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
+> - image processing <br>
+> - frame division
 
 * * *
 <br><br><br>
