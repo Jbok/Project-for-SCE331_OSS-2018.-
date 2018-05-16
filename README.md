@@ -1,13 +1,13 @@
 # **KBO: Knocking Baseball by Opensource**
 
-<br><br><br>
+<br><br><br><br>
 
-## **★ _Contents_ (목차)★**
+## **★ _Contents_ (목차) ★**
 * * *
 - About
 - Overview
 - Need to improvement (개선점)
-- How it works (작동원리)
+- How it works
 - How to use (사용법) example 포함 예정
 - Tools
 - Licenses
@@ -15,14 +15,14 @@
 
 * * *
 
-<br><br><br>
+<br><br><br><br>
 
 
 ## **About**
 * * *
 해당 프로젝트는 **openCV와 Tesseract 오픈소스를 사용하여 야구 생중계 화면에서 문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 웹 서비스를 제공한다.
 * * *
-<br><br>
+<br><br><br>
 
 
 ## **Overview**
@@ -34,7 +34,7 @@
 2) 기존에 가지고 있는 DB를 통하여 현 경기 상황에 대해 시청자가 바로 알지 못한 통계적 수치를 분석한다. <br>
 3) 이렇게 얻어진 수치를 다시 웹을 통해 시청자한테 전달함으로써 시청자가 세부적인 데이터에 빠르게 접근할 수 있게 만든다.
 * * *
-<br><br>
+<br><br><br>
 
 
 ## **Need to improvement**
@@ -50,21 +50,33 @@
 > - frame division
 
 * * *
-<br><br>
+<br><br><br>
 
 
 ## **How it works**
 * * *
-#### 1. 영상에서 문자를 인식한다.
 <br>
+#### 1. 영상에서 문자를 인식한다.
+<br><br>
 <img src="/uploads/d7547ebb50622191507138899ff22aaa/rdm1.png" width="50%" height="50%">
 (▲ 동작 예시 영상 : <https://www.youtube.com/watch?v=Yv6IkGRQIWk>)
 <br><br><br>
 <img src="/uploads/16c5828976a803bae7df281ff2b9d95f/rdm2.png" width="50%" height="50%">
 (▲ 야구 생중계 화면에서 선수의 이름을 인식하는 모습 - 예상)
 <br><br><br>
+야구 경기가 생중계되는 전체 화면 중에서 선수의 이름이 있는 위치는 항상 일정하다. <br>
+따라서 코드 상에서 그 위치를 지정해준다면 생중계되는 화면에서 선수의 이름을 인식하는 과정을 좀 더 쉽게 처리할 수 있을 것이라고 기대해볼 수 있다. <br>
+> **국내야구를 중계해주는 채널은 총 5군데가 있다.**
+> 1. MBC SPORTS+
+> 2. KBS N SPORTS
+> 3. SPOTV
+> 4. SBS SPORTS
+> 5. SPOTV2
+
+(단, 채널마다 선수의 이름의 위치가 다르기 때문에 좌표값이 상이함.)
+<br><br><br><br>
 #### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
-<br><br><br>
+<br><br><br><br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
 (▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
 <br><br><br>
@@ -76,17 +88,18 @@
 > 4. [네이버 기록실](http://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo&year=2018 "가장 기본적인 정보를 확인가능한 네이버 포탈 내의 야구 통계자료 사이트")
 > 5. [야구친구](http://www.yachin.co.kr/ "과거에 했던 경기 또는 오늘 경기에서의 선수들 기록, 실시간 승리 확률 그래프 등을 확인 가능")
 
-<br>
+<br><br><br>
 #### 3. DB로부터 얻은 수치를 (그대로 or 가공해서) 웹을 통해 전달한다.
 
 * * *
-<br><br>
+<br><br><br>
 
 
 ## **How to use**
 * * *
-<br><br>
+
 * * *
+<br><br><br>
 
 
 ## **Tools**
@@ -98,7 +111,7 @@
 - html
 
 * * *
-<br><br>
+<br><br><br>
 
 
 ## **Licenses**
@@ -142,10 +155,11 @@ limitations under the License.
 <br>
 This project is licensed under these open source licenses.
 
-<br><br>
+* * *
+<br><br><br>
 
 
 ## **Members**
 * * *
 권민지 김필선 김택림 이주복
-<br><br>
+<br><br><br>
