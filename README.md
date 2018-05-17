@@ -56,8 +56,8 @@
 > **국내야구를 중계해주는 채널은 총 5군데가 있다.**
 > 1. MBC SPORTS+
 > 2. KBS N SPORTS
-> 3. SPOTV
-> 4. SBS SPORTS
+> 3. SBS SPORTS
+> 4. SPOTV
 > 5. SPOTV2
 
 (단, 채널마다 선수의 이름의 위치가 다르기 때문에 좌표값이 상이함.)
@@ -164,5 +164,5 @@ This project is licensed under these open source licenses.
 
 ## **Members**
 * * *
-권민지 김필선 김택림 이주복
+**권민지 김필선 김택림 이주복**
 <br><br><br>
