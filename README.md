@@ -66,7 +66,7 @@
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"
 <br><br><br><br>
 #### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
-<br><br><br><br>
+<br><br>
 <img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
 (▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
 <br><br><br>
