@@ -8,6 +8,7 @@
 - Overview
 - How it works
 - Need to improvement (개선점)
+- Installation
 - How to use (사용법) example 포함 예정
 - Tools
 - Licenses
@@ -100,6 +101,11 @@
 * * *
 <br><br><br>
 
+## **Istallation**
+* * *
+
+* * *
+<br><br><br>
 
 ## **How to use**
 * * *
