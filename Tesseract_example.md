@@ -1,4 +1,4 @@
-#### 기존의 Tesseract 오픈소스 실행 예시를 보여주기 위한 파일입니다.ㅠ
+#### 기존의 Tesseract 오픈소스 실행 예시를 보여주기 위한 파일입니다.
 <br>
 # Tesseract example
 * * *
