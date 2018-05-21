@@ -103,7 +103,7 @@
 
 ## **Installation**
 * * *
-
+openCV는 python기반. <br>
 * * *
 <br><br><br>
 
