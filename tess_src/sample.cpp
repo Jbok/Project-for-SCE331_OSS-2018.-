@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
     printf("Tesseract-ocr version: %s\n", myOCR->Version());
 
-    if (myOCR->Init(NULL, "eng")) {
+    if (myOCR->Init(NULL, "kor")) {
 	fprintf(stderr, "Could not initialize tesseract.\n");
 	exit(1);
     }
@@ -24,27 +24,27 @@ int main(int argc, char* argv[]) {
 
     // read iamge
     namedWindow("sample", 0);
-    Mat image = imread("./sample.png", 0);
+    Mat image = imread("../src_framedivision/sample_pixel.jpg");
+    //Mat image = imread("./sample.png", 0);
 
     // set region of interest (ROI), i.e. regions that contain text
-    Rect text1ROI(80, 50, 800, 110);
-    Rect text2ROI(190, 200, 550, 50);
+    //Rect text1ROI(80, 50, 800, 110);
+    //Rect text2ROI(190, 200, 550, 50);
 
     // recognize text
-    myOCR->TesseractRect(image.data, 1, image.step1(), text1ROI.x, text1ROI.y, text1ROI.width, text1ROI.height);
+    //myOCR->TesseractRect(image.data, 1, image.step1(), text1ROI.x, text1ROI.y, text1ROI.width, text1ROI.height);
+    myOCR->TesseractRect(image.data, 1, image.step1(), 455, 630, 125, 55);
     const char *text1 = myOCR->GetUTF8Text();
 
-    myOCR->TesseractRect(image.data, 1, image.step1(), text2ROI.x, text2ROI.y, text2ROI.width, text2ROI.height);
-    const char *text2 = myOCR->GetUTF8Text();
-
-    // remove "newline"
+    //myOCR->TesseractRect(image.data, 1, image.step1(), text2ROI.x, text2ROI.y, text2ROI.width, text2ROI.height);
+    //const char *text2 = myOCR->GetUTF8Text();
 
     // print found text
     printf("found text1: \n");
     printf("%s \n", text1);
 
-    printf("found text2: \n");
-    printf("%s \n", text2);
+    //printf("found text2: \n");
+    //printf("%s \n", text2);
 
     myOCR->Clear();
     myOCR->End();
