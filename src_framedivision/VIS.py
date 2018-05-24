@@ -41,19 +41,18 @@ def main():
         
         if ret == True:
             ##COLOR_BGR2RGB
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
-            ##frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
             frame = frame[630:685, 455:580]
- 
+
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
                 OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
-                plt.imsave(OUTPUT_IMAGE_PATH, frame)
-                
+                cv2.imwrite(OUTPUT_IMAGE_PATH, frame)
      
         # Break the loop
         else: 
