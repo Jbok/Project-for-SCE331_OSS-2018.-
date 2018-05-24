@@ -7,7 +7,8 @@ Created on Tue May  8 02:54:42 2018
 
 import os
 import cv2
- 
+import numpy
+
 ###############################################################################
 # parameters defined by user
 PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
@@ -43,11 +44,24 @@ def main():
             ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-            frame = frame[460:485, 275:340]
             
+            ##frame = cv2.resize(frame, (3000, 1500))
+            
+            ##Calculate height and width of video
+            height, width = frame.shape[:2]
+            
+            ##Calculate name space pixel value by the ratio
+            x_left = int(width * (275/1000))
+            x_right = int(width * (340/1000))
+            y_top = int(height * (460/560))
+            y_bottom = int(height * (485/560))
+            
+            ##Cropping image frame[height, width]
+            frame = frame[y_top:y_bottom, x_left:x_right]
+          
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.png' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
