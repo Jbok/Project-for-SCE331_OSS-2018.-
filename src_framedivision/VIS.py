@@ -8,7 +8,6 @@ Created on Tue May  8 02:54:42 2018
 import os
 import cv2
 from matplotlib import pyplot as plt
-from PIL import Image
  
 ###############################################################################
 # parameters defined by user
