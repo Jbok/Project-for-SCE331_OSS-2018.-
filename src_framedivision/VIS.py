@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 ###############################################################################
 # parameters defined by user
 PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
-VIDEO_NAME = 'vfc_sample_2'
+VIDEO_NAME = 'sample_2018'
 VIDEO_EXTENSION = '.mp4'
 PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
 ###############################################################################
