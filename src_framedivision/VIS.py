@@ -7,12 +7,11 @@ Created on Tue May  8 02:54:42 2018
 
 import os
 import cv2
-from matplotlib import pyplot as plt
  
 ###############################################################################
 # parameters defined by user
 PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
-VIDEO_NAME = 'vfc_sample_2'
+VIDEO_NAME = 'sample_2018'
 VIDEO_EXTENSION = '.mp4'
 PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
 ###############################################################################
@@ -44,8 +43,8 @@ def main():
             ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-            frame = frame[630:685, 455:580]
-
+            frame = frame[460:485, 275:340]
+            
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
                 OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
