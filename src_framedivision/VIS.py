@@ -44,7 +44,8 @@ def main():
             ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-            frame = frame[630:685, 455:580]
+            ##frame = frame[630:685, 455:580] This is pixel value of sample video 'vfc_sample_2'
+            frame = frame[460:485, 275:340] # This is pixel value of sample video 'sample_2018'
 
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
