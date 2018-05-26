@@ -11,10 +11,10 @@ import numpy
 
 ###############################################################################
 # parameters defined by user
-PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
+PATH_TO_INPUT_VIDEO_PATH = './sample_video/'
 VIDEO_NAME = 'sample_2018'
 VIDEO_EXTENSION = '.mp4'
-PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
+PATH_TO_OUTPUT_IMAGES_DIR = './sample_frame_image/'
 ###############################################################################
  
 def main():
@@ -60,7 +60,7 @@ def main():
           
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'/', 'image_%09d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
