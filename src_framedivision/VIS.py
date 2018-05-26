@@ -44,14 +44,12 @@ def main():
             ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-<<<<<<< HEAD
             
-            ##frame = cv2.resize(frame, (3000, 1500))
             
             ##Calculate height and width of video
             height, width = frame.shape[:2]
             
-            ##Calculate name space pixel value by the ratio
+            ##Calculate namespace pixel value by the ratio
             x_left = int(width * (275/1000))
             x_right = int(width * (340/1000))
             y_top = int(height * (460/560))
@@ -60,14 +58,9 @@ def main():
             ##Cropping image frame[height, width]
             frame = frame[y_top:y_bottom, x_left:x_right]
           
-=======
-            ##frame = frame[630:685, 455:580] This is pixel value of sample video 'vfc_sample_2'
-            frame = frame[460:485, 275:340] # This is pixel value of sample video 'sample_2018'
-
->>>>>>> 909a55b15196b074d4c36c5abe963a899acdc4fa
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.png' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
