@@ -63,7 +63,7 @@
 
 단, 야구 중계 채널마다 선수의 이름의 위치가 다르기 때문에 좌표값이 상이하다. <br>
 <img src="/uploads/72f74a25922fcfc4ba8e116cdca78095/궁금.png" width="15%" height="15%"> <br>
-야구 중계 채널마다 이름의 위치가 [어떻게 다를까][1]요?
+(야구 중계 채널마다 이름의 위치가 [어떻게 다를까][1]요?)
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"
 <br><br><br><br>
 #### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
@@ -95,9 +95,11 @@
 > KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br><br>
 > ### **_openCV_**
 > <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
-> - image processing <br>
 > - frame division
+> - to get pixel value of image <br>
+> (☞[openCV 실행 예시][2])
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
+[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/b924c322d1453005987f741d41d4b5bcd0f93275/openCV_example.md
 * * *
 <br><br><br>
 
