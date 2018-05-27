@@ -101,7 +101,7 @@
 > - RGB value <br>
 > (☞[openCV 실행 예시][2])
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
-[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/b924c322d1453005987f741d41d4b5bcd0f93275/openCV_example.md
+[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
 * * *
 <br><br><br>
 
