@@ -8,7 +8,7 @@
 #include <tesseract/publictypes.h>
 #include <leptonica/allheaders.h>
 
-#define FILE_ 25 // Number of Frame Image files
+#define FILE_ 139 // Number of Frame Image files
 
 using namespace std;
 
@@ -30,8 +30,8 @@ int main()
   for (int i = 0; i < FILE_; i++) {
     api->Init("/usr/share/tesseract-ocr/tessdata", "kor");
 
-    string input_img = "/home/tlimkim/workspace/kbo/opencv_src/sample_frame_image/sample_2018/";
-    //string input_img = "/home/tlimkim/workspace/kbo/image/vfc_sample_2/"; // path for KIA Video
+    //string input_img = "/home/tlimkim/workspace/kbo/opencv_src/sample_frame_image/sample_2018/";
+    string input_img = "/home/tlimkim/workspace/kbo/image/vfc_sample_2/"; // path for KIA Video
 
     string num = std::to_string(i); // for number of image file
     input_img = input_img + num + ".jpg";
@@ -42,9 +42,10 @@ int main()
 
     api->SetImage(image);
     api->SetPageSegMode(tesseract::PSM_SINGLE_WORD);
+    api->SetVariable("tessedit_char_blacklist", "[]_\n-1234567890~/");
     outText = api->GetUTF8Text();
 
-    printf("Result for each frame: %s", outText); // regonized word from the image
+    //printf("Result for each frame: %s", outText); // regonized word from the image
 
     string str_outText(outText);
 
@@ -67,12 +68,12 @@ int main()
   int idx = 0;
 
   for (int i = 1; i < FILE_; i++) {
-    if (max < flag[i]) {
+    if (max < flag[i] && str_outArray[i][0] != "") {
       max = flag[i];
       idx = i;
     }
   }
-
+  
   const char *str = str_outArray[idx][0].c_str();
   printf("Batter Name (Final Result): %s", str);
 
