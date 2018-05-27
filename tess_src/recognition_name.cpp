@@ -31,7 +31,7 @@ int main()
     api->Init("/usr/share/tesseract-ocr/tessdata", "kor");
 
     string input_img = "/home/tlimkim/workspace/kbo/opencv_src/sample_frame_image/sample_2018/";
-    //string input_img = "/home/tlimkim/workspace/kbo/image/vfc_sample_2/";
+    //string input_img = "/home/tlimkim/workspace/kbo/image/vfc_sample_2/"; // path for KIA Video
 
     string num = std::to_string(i); // for number of image file
     input_img = input_img + num + ".jpg";
