@@ -4,7 +4,8 @@
 * * *
 <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br>
 * frame division <br>
-* to get pixel value of image <br>
+* pixel value <br>
+* RGB value <br>
 <br><br>
 
 ## 실행 예제
