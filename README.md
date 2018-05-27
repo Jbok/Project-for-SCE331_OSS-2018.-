@@ -8,8 +8,8 @@
 - Overview
 - How it works
 - Need to improvement (개선점)
-- Installation
-- How to use (사용법) example 포함 예정
+- Installation (설치방법)
+- How to use (사용법)
 - Tools
 - Licenses
 - Members
@@ -91,12 +91,14 @@
 해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br><br>
 > ### **_Tesseract_**
 > <br> <img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%"> <br><br>
-> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. (☞[기존 Tesseract 실행 예시][1]) <br>
-> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br><br>
+> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. <br>
+> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br>
+> (☞[기존 Tesseract 실행 예시][1]) <br><br>
 > ### **_openCV_**
 > <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
 > - frame division
-> - to get pixel value of image <br>
+> - pixel value
+> - RGB value <br>
 > (☞[openCV 실행 예시][2])
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
 [2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/b924c322d1453005987f741d41d4b5bcd0f93275/openCV_example.md
