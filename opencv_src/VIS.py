@@ -7,14 +7,13 @@ Created on Tue May  8 02:54:42 2018
 
 import os
 import cv2
-import numpy
 
 ###############################################################################
 # parameters defined by user
-PATH_TO_INPUT_VIDEO_PATH = './sample_video/'
+PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
 VIDEO_NAME = 'sample_2018'
 VIDEO_EXTENSION = '.mp4'
-PATH_TO_OUTPUT_IMAGES_DIR = './sample_frame_image/'
+PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
 ###############################################################################
  
 def main():
@@ -45,8 +44,12 @@ def main():
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
             
-            
             ##Calculate height and width of video
+            height, width = frame.shape[:2]
+            ##Resize frame to enhance recognition rate
+            frame = cv2.resize(frame,(2000, 1000))
+            
+            ##Re calculate height and width of resize frame
             height, width = frame.shape[:2]
             
             ##Calculate namespace pixel value by the ratio
@@ -60,7 +63,7 @@ def main():
           
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'/', 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
