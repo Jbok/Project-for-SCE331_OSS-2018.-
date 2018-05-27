@@ -8,7 +8,7 @@
 #include <tesseract/publictypes.h>
 #include <leptonica/allheaders.h>
 
-#define FILE_ 139 // Number of Frame Image files
+#define FILE_ 25 // Number of Frame Image files
 
 using namespace std;
 
@@ -31,7 +31,7 @@ int main()
     api->Init("/usr/share/tesseract-ocr/tessdata", "kor");
 
     //string input_img = "/home/tlimkim/workspace/kbo/opencv_src/sample_frame_image/sample_2018/";
-    string input_img = "/home/tlimkim/workspace/kbo/image/vfc_sample_2/"; // path for KIA Video
+    string input_img = "/home/tlimkim/workspace/kbo/image/sample_2018/"; // path for KIA Video
 
     string num = std::to_string(i); // for number of image file
     input_img = input_img + num + ".jpg";
