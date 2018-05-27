@@ -24,4 +24,7 @@ output 파일은 아래와 같이 저장됩니다. <br><br><br><br>
 테스트는 아나콘다 Spyder (Python 3.6) 환경에서 진행했습니다. <br><br>
 ![캡처2](/uploads/47795fc5c88305c9dbb53bbf4e16a9f5/캡처2.JPG) <br><br><br>
 코드를 실행하면 아래와 같은 창이 뜹니다. <br><br><br><br>
-![창](/uploads/2f9e33d90279a771181b372d383754c5/창.JPG) <br>
+![창](/uploads/21b592001a1123a7946161d62275aeeb/창.JPG) <br><br><br>
+창의 왼쪽 하단에 현재 마우스커서가 위치하는 곳의 픽셀값과 RGB값이 추출되어 나타납니다. <br>
+각 값은 마우스커서의 위치에 따라 계속 변합니다. <br><br><br>
+![캡처d](/uploads/449b599d62f3cf9796fd4d108d7b54d2/캡처d.JPG)
