@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue May  8 02:54:42 2018
+
 @author: bok
 """
+
 import os
 import cv2
-from matplotlib import pyplot as plt
-from PIL import Image
- 
+
 ###############################################################################
 # parameters defined by user
 PATH_TO_INPUT_VIDEO_PATH = './sample_video/'
-VIDEO_NAME = 'vfc_sample_2'
+VIDEO_NAME = 'sample_2018'
 VIDEO_EXTENSION = '.mp4'
-PATH_TO_OUTPUT_IMAGES_DIR = '../image/'
+PATH_TO_OUTPUT_IMAGES_DIR = './sample_frame_image/'
 ###############################################################################
  
 def main():
@@ -40,19 +40,34 @@ def main():
         
         if ret == True:
             ##COLOR_BGR2RGB
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            ##frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             ##COLOR_BGR2GRAY
-            ##frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-            frame = frame[630:685, 455:580]
- 
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+            
+            ##Calculate height and width of video
+            height, width = frame.shape[:2]
+            ##Resize frame to enhance recognition rate
+            frame = cv2.resize(frame,(2000, 1000))
+            
+            ##Re calculate height and width of resize frame
+            height, width = frame.shape[:2]
+            
+            ##Calculate namespace pixel value by the ratio
+            x_left = int(width * (275/1000))
+            x_right = int(width * (340/1000))
+            y_top = int(height * (460/560))
+            y_bottom = int(height * (485/560))
+            
+            ##Cropping image frame[height, width]
+            frame = frame[y_top:y_bottom, x_left:x_right]
+          
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'/', 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'/', '%d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
-                plt.imsave(OUTPUT_IMAGE_PATH, frame)
-                
+                cv2.imwrite(OUTPUT_IMAGE_PATH, frame)
      
         # Break the loop
         else: 
