@@ -1,7 +1,7 @@
 ## Frame Capture Ignore file ##
 
 #ignore all files in the sample_frame_image dir
-src_framedivision/sample_frame_image/*
+opencv_src/sample_frame_image/*
 # Vim Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
