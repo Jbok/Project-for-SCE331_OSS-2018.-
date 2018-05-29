@@ -1,6 +1,6 @@
 # **KBO: Knocking Baseball by Opensource**
 
-<br><br><br>
+<br>
 
 ## **Contents**
 * * *
@@ -15,13 +15,12 @@
 - Licenses
 - Members
 
-<br><br><br>
-
-
+<br><br>
 
 ## **About**
 * * *
-해당 프로젝트의 궁극적인 목적은  **openCV와 Tesseract 오픈소스를 사용하여 야구 생중계 화면에서 문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 서비스를 제공하는 것이다.<br>
+해당 프로젝트의 궁극적인 목적은  **openCV와 Tesseract 오픈소스를 사용하여 야구 생중계 화면에서 문자를 인식**한 후 실시간으로 경기 데이터를 사용자에게 전달하는 서비스를 제공하는 것이다.<br><br>
+
 이를 위해 **영상에서의 문자 인식 API**를 제작한다. 
 <br><br>
 
@@ -41,11 +40,12 @@
 
 우리가 원하는 것은 생중계 영상에서 실시간으로 타자의 이름을 얻어오는 것이었다. 야구 생중계의 경우 타자의 이름은 대부분 영상의 같은 위치에서 제공된다. <br>
 따라서 우리는 해당 영상의 일정 위치를 찾아 이를 인식하는 방향으로 프로젝트를 진행하였다. <br>
-
 위에서 언급했듯이 OpenCV와 Tesseract 오픈소스를 사용하였는데 그 이유로는 다음과 같았다. <br><br>
 
 1. OpenCV로 영상과 이미지 프로세싱이 동시에 가능하다.<br>
-2. Tesseract의 경우 영어 뿐만 아니라 한글 또한 인식 능력이 뛰어나다.<br><br>
+2. Tesseract의 경우 영어 뿐만 아니라 한글 또한 인식 능력이 뛰어나다.
+
+<br><br>
 
 OpenCV를 사용하여 영상을 프레임 별로 나눔과 동시에 우리가 원하는 타자의 이름 부분만 이미지로 저장하였다. 그리고 저장된 이름 이미지를 Tesseract로 인식하여 해당 인식된 결과를 출력해 주었다.
 
@@ -57,30 +57,31 @@ OpenCV를 사용하여 영상을 프레임 별로 나눔과 동시에 우리가 
 (▲ 야구 생중계 화면에서 선수의 이름을 인식하는 모습 - 예상)
 <br><br><br>
 
-생중계 영상을 이미지 프레임으로 나누게 되면 위의 그림과 같은 이미지들이 생기게 된다. 이 때 추가적으로 해당 타자의 이름이 있는 위치를 OpenCV를 통해 설정해주면 아래와 같이 타자의 이름만 이미지로 저장이 된다. <br><br>
+생중계 영상을 이미지 프레임으로 나누게 되면 위의 그림과 같은 이미지들이 생기게 된다. 
+이 때 추가적으로 해당 타자의 이름이 있는 위치를 OpenCV를 통해 설정해주면 아래와 같이 타자의 이름만 이미지로 저장이 된다. <br><br>
 
 <br>
-하지만 야구 중계 채널마다 선수의 이름 위치가 다른 경우가 [존재한다][1]. <br> 
-따라서 이 프로젝트에서는 하나의 API로 제작하여 이 소스코드를 사용하는 SW개발자들이 원하는 좌표값을 Parameter로 지정하여 원하는 위치만을 이미지로 저장할 수 있게 제공할 것이다.<br>
-[1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"<br>
+하지만 야구 중계 채널마다 선수의 [이름 위치가 다른 경우][1]가 존재한다. <br> 
+따라서 **이 프로젝트에서는 하나의 API로 제작**하여 이 소스코드를 사용하는 SW개발자들이 원하는 좌표값을 Parameter로 지정하여 원하는 위치만을 이미지로 저장할 수 있게 제공할 것이다.<br>
+
+[1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"
+<br>
 
 OpenCV를 이용하여 영상을 프레임과 원하는 위치만을 이미지로 저장하는 소스코드는 VIS.py 이며 해당 설명은 다른 MarkDown에 기록해놓았다. <br><br>
-
-이렇게 원하는 위치만 이미지로 저장된 것을 가지고 해당 이미지에서 우리가 원하는 타자의 이름을 추출하려 하였다. 이를 위해 Tesseract를 사용하였고 해당 소스코드는 recognition_name.cpp 에 있다. <br>
+이렇게 원하는 위치만 이미지로 저장된 것을 가지고 해당 이미지에서 우리가 원하는 타자의 이름을 추출하려 하였다. 이를 위해 Tesseract를 사용하였고 해당 소스코드는 recognition_name.cpp 에 있다. <br><br>
 
 Tesseract는 수많은 C++ API를 제공하는데 이는 보통 하나의 이미지만을 처리하는 API가 대부분이다. <br>
-우리는 생중계가 진행됨과 많은 이미지들을 계속해서 인식하여야 하기 때문에 이미지들을 계속해서 불러옴과 동시에 인식을 진행하여야 했다. <br>
-
+우리는 생중계가 진행됨과 동시에 많은 이미지들을 계속해서 인식해야 하기 때문에 이미지들을 계속해서 불러오고 그에 대한 인식을 진행하여야 했다. <br>
 따라서 인식된 결과들 중에 가장 많이 나타난, 즉 정확도가 높은 결과를 뽑아 내는 작업을 진행하였고 현재 한 타석 정도의 영상에서 타자의 이름을 인식할 수 있게 되었다.<br><br>
 
-<br>
-
+<br><br>
 ## **Any Improvements**
 * * *
 
 현재 우리 팀의 목적은 오픈소스들의 장점을 살려 하나의 API를 제작하는 것이다. <br>
 또한 이 API의 활용가능성을 보면 Tesseract와 같은 정확한 문자 인식 시스템을 가지고 기존의 인식 시스템보다 더 나은 결과를 보여줄 수 있다고 생각한다. <br><br>
 
+<br>
 ## **Open Issues**
 * * *
 
@@ -88,65 +89,30 @@ Tesseract는 수많은 C++ API를 제공하는데 이는 보통 하나의 이미
 
 1. 한 타석 뿐만 아니라 더 여러 타자들이 나오는 경우에서의 이름 인식
 2. 해당 영상을 이미지로 나눌 때에 관련된 저장공간 Overhead
+
 <br><br>
 
 위의 Issue들은 앞으로 더 살펴보아야 할 과제이다.
 
+<br><br><br>
 ## **Installation**
 * * *
 OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었기 때문에 해당 라이브러리에 대한 설치가 필요하다. <br>
 <br>
 각 라이브러리 설치에 대한 링크는 아래를 참조<br><br>
 
-OpenCV: <br><br>
-Tessearact: <br>
-
-
-
-<br><br><br>
-<!---
-#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
-<br><br>
-<img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
-(▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
-<br><br><br>
-각종 통계자료를 확인할 수 있는 웹 서비스에서 crawling하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달한다. <br>
-> 각종 통계자료를 확인할 수 있는 **참고사이트 목록**은 아래와 같다. <br>
-> 1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
-> 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
-> 3. [KBReport](http://www.kbreport.com/main "한국 프로야구 통계 사이트")
-> 4. [네이버 기록실](http://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo&year=2018 "가장 기본적인 정보를 확인가능한 네이버 포탈 내의 야구 통계자료 사이트")
-> 5. [야구친구](http://www.yachin.co.kr/ "과거에 했던 경기 또는 오늘 경기에서의 선수들 기록, 실시간 승리 확률 그래프 등을 확인 가능")
+> OpenCV: 
+> <br><br>
+> Tessearact: 
 
 
 <br><br><br>
-## **Need to improvement**
-* * *
-해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br><br>
-> ### **_Tesseract_**
-> <br> <img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%"> <br><br>
-> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. <br>
-> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br>
-> (☞[기존 Tesseract 실행 예시][2]) <br><br>
-> ### **_openCV_**
-> <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
-> - frame division
-> - pixel value성
-> - RGB value <br>
-> (☞[openCV 실행 예시][3])
-[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
-[3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
-* * *
--->
-<br><br><br>
-
 ## **How to Execute**
 * * *
 
 API에 대한 개발 완료 시 작성
+
 <br><br><br>
-
-
 ## **API Language**
 * * *
 - C++ (Tesseract)
@@ -203,4 +169,42 @@ This project is licensed under these open source licenses.
 ## **Members**
 * * *
 **권민지 김필선 김택림 이주복**
+<br><br><br>
+
+
+<br><br><br>
+<!---
+#### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
+<br><br>
+<img src="/uploads/cc933d39cee107f9f68cd62f4f539467/rdm3.png" width="60%" height="60%">
+(▲ 2017 시즌, '한화 이글스' 팀의 '김태균' 선수의 對 롯데 자이언츠 투수 상대전적)
+<br><br><br>
+각종 통계자료를 확인할 수 있는 웹 서비스에서 crawling하여 데이터를 추출하고 경기 실시간으로 타자와 투수의 맞대결 전적, 예측을 사용자에게 전달한다. <br>
+> 각종 통계자료를 확인할 수 있는 **참고사이트 목록**은 아래와 같다. <br>
+> 1. [STATIZ](http://www.statiz.co.kr/main.php "KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나")
+> 2. [KBO](https://www.koreabaseball.com/ "KBO 공식 홈페이지")
+> 3. [KBReport](http://www.kbreport.com/main "한국 프로야구 통계 사이트")
+> 4. [네이버 기록실](http://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo&year=2018 "가장 기본적인 정보를 확인가능한 네이버 포탈 내의 야구 통계자료 사이트")
+> 5. [야구친구](http://www.yachin.co.kr/ "과거에 했던 경기 또는 오늘 경기에서의 선수들 기록, 실시간 승리 확률 그래프 등을 확인 가능")
+
+
+<br><br><br>
+## **Need to improvement**
+* * *
+해당 프로젝트의 핵심 기술은 **Tesseract를 이용한 문자 인식**이다. <br><br>
+> ### **_Tesseract_**
+> <br> <img src="/uploads/533c5f7685a87f512e19dc7542aeba21/캡처.JPG" width="10.5%" height="10.5%"> <br><br>
+> 기존의 Tesseract 오픈소스는 사진 속의 문자를 인식하는 것에 초점이 맞춰져 있다. <br>
+> KBO(해당 프로젝트)는 이 오픈소스를 개선하여 사진에서뿐만 아니라 **영상에서도 문자 인식이 가능하도록 하는 것**을 목표로 한다. <br>
+> (☞[기존 Tesseract 실행 예시][2]) <br><br>
+> ### **_openCV_**
+> <br> <img src="/uploads/482434afae428a2ff80e526dd07a9ef2/OpenCV_Logo_with_text.png" width="10%" height="10%"> <br><br>
+> - frame division
+> - pixel value성
+> - RGB value <br>
+> (☞[openCV 실행 예시][3])
+[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
+[3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
+* * *
+-->
 <br><br><br>
