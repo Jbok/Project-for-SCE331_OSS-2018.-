@@ -60,7 +60,7 @@ OpenCV를 사용하여 영상을 프레임 별로 나눔과 동시에 우리가 
 생중계 영상을 이미지 프레임으로 나누게 되면 위의 그림과 같은 이미지들이 생기게 된다. 
 이 때 추가적으로 해당 타자의 이름이 있는 위치를 OpenCV를 통해 설정해주면 아래와 같이 타자의 이름만 이미지로 저장이 된다. <br><br>
 
-<img src="/uploads/cb4d1a5bea66c284fb79c39f7ace95fb/samplekor.png" width="20%" height="20%">
+<img src="/uploads/cb4d1a5bea66c284fb79c39f7ace95fb/samplekor.png" width="10%" height="10%">
 (▲ 인식을 원하는 이미지 형식)
 <br><br>
 
@@ -70,7 +70,9 @@ OpenCV를 사용하여 영상을 프레임 별로 나눔과 동시에 우리가 
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"
 <br>
 
-OpenCV를 이용하여 영상을 프레임과 원하는 위치만을 이미지로 저장하는 소스코드는 **VIS.py** 이며 동작 예시는 다른 MarkDown에 기록해 놓았다. <br><br>
+OpenCV를 이용하여 영상을 프레임과 원하는 위치만을 이미지로 저장하는 소스코드는 **VIS.py** 이며 동작 예시는 다른 [MarkDown][2]에 기록해 놓았다. <br><br>
+
+[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
 
 또한  이렇게 원하는 위치만 이미지로 저장된 것을 가지고 해당 이미지에서 우리가 원하는 타자의 이름을 추출하려 하였다. 
 이를 위해 Tesseract를 사용하였고 해당 소스코드는 **recognition_name.cpp** 에 있다. <br><br>
@@ -79,7 +81,7 @@ Tesseract는 수많은 C++ API를 제공하는데 이는 보통 하나의 이미
 우리는 생중계가 진행됨과 동시에 많은 이미지들을 계속해서 인식해야 하기 때문에 이미지들을 계속해서 불러오고 이들을 인식하여야 했다. <br>
 따라서 각 이미지에서 인식된 결과들 중에 가장 많이 나타난, 즉 정확도가 높은 결과를 뽑아 내는 작업을 진행하였고 현재 한 타석 정도의 영상에서 타자의 이름을 인식할 수 있게 되었다.<br><br>
 
-<img src="/uploads/83823b78674b42af0606eeb79590a1cc/batter_result.png" width="50%" height="50%">
+<img src="/uploads/83823b78674b42af0606eeb79590a1cc/batter_result.png" width="40%" height="40%">
 (▲ 영상에서 인식된 이름의 출력물)
 
 <br><br><br>
@@ -110,10 +112,11 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 <br>
 각 라이브러리 설치에 대한 링크는 아래를 참조<br><br>
 
-> OpenCV: 
+> OpenCV: 작성 예정
 > <br><br>
-> Tessearact: 
+> Tessearact: 작성 예정
 
+<!--- [3]: http:// -->
 
 <br><br><br>
 ## **How to Execute**
@@ -122,7 +125,7 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 API에 대한 개발 완료 시 작성
 
 <br><br><br>
-## **API Language**
+## **API Languages**
 * * *
 - C++ (Tesseract)
 - Python (OpenCV)
