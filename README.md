@@ -215,8 +215,8 @@ This project is licensed under these open source licenses.
 > - pixel value성
 > - RGB value <br>
 > (☞[openCV 실행 예시][3])
-[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
-[3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
+## [2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/Tesseract_example.md
+## [3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
 * * *
 -->
 <br><br><br>
