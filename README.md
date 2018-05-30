@@ -100,10 +100,11 @@ Tesseract와 OpenCV 모두 오픈소스이기 때문에 더 나은 영상처리�
 
 1. 한 타석 뿐만 아니라 여러 타자들이 나오는 경우에서의 이름 인식
 2. 해당 영상을 이미지로 나눌 때에 관련된 저장공간 Overhead
-3. 동명이인 선수가 있을 경우 어떻게 처리할 것인가?
+3. 동명이인 선수가 있을 경우 어떻게 처리할 것인가? [이에 대한 논의][3]
 
 <br>
 위의 Issue들은 앞으로 더 살펴보아야 할 과제이다. <br><br><br>
+[3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/9
 
 
 ## **Installation**
