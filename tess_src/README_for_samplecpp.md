@@ -25,6 +25,8 @@ So, when we build OpenCV after installed Tesseract, there are dependency between
 
 I gave an Issue to OpenCV github Repository, about Building error between Tesseract API.<br><br>
 
+Issue on OpenCV Github: <https://github.com/opencv/opencv_contrib/issues/1636> <br>
+
 <!--
 This part will be img and link of Issue on Github
 -->
