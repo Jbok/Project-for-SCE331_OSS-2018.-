@@ -1,7 +1,7 @@
 # How to Run recognition_name.cpp
-<br><br>
+<br>
 Written by TaekLim Kim
-<br><br><br>
+<br><br><br><br>
 
 ## Setting OpenCV & Tessearct
 
@@ -9,14 +9,13 @@ Written by TaekLim Kim
 You need to set OpenCV and Tesseract to run this source code. <br>
 It was tested on the Linux Ubuntu 16.04. Below websites are the references for building these SW. <br>
 
-OpenCV
-
+<br>
 How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653> <br>
 How to build tesseract: <http://jybaek.tistory.com/620> <br>
-<br><br>
+<br>
 
 ### Issues while compiling and building OpenCV
-
+<br>
 There are some building error while we install OpenCV. <br><br>
 
 The main problem of this issue is that conflict between OpenCV and Tesseract.<br>
@@ -54,12 +53,12 @@ It should be compiled with c++11 because the tesseract only support the c++11 (n
 ```
 g++ -std=c++11 recognition_name.cpp -o batter -llept -ltesseract
 ```
-<br>
-After that, you can find the executable file`````` <br>
+
+After that, you can find the executable file <br><br>
 
 ### Run
 
-```./opencv-tesseract``` will run this sample code. <br>
+```./batter``` will run this code. <br>
 
 If you using the virtual machine or if you get some error message that is ```: cannot connect to X server```, <br>
 you should run with ```xvfb-run -a ./batter``` 
