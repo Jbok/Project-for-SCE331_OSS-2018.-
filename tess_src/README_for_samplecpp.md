@@ -34,7 +34,15 @@ This part will be img and link of Issue on Github
 <br>
 I found some solution about this problem, and I uploaded on to OpenCV Issue. <br>
 There are ```CMakeFilelist.txt```, and we can change the C++ version. <br>
+To adapt c++11 version onto OpenCV build process, you should write a line of code <br><br>
 
+```C++
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+```
+<br><br>
+
+And then, you can continue to building OpenCV process.<br>
+There will be no more problem about the confilict between c++11 Tesseract & OpenCV
 <br><br>
 
 
@@ -44,20 +52,25 @@ There are ```CMakeFilelist.txt```, and we can change the C++ version. <br>
 
 It should be compiled with c++11 because the tesseract only support the c++11 (not OpenCV)
 ```
-g++ -std=c++11 sample.cpp -o opencv-tesseract `pkg-config --cflags --libs opencv tesseract`
+g++ -std=c++11 recognition_name.cpp -o batter -llept -ltesseract
 ```
 <br>
-After that, you can find the executable file name `````` <br>
+After that, you can find the executable file`````` <br>
 
 ### Run
 
 ```./opencv-tesseract``` will run this sample code. <br>
 
 If you using the virtual machine or if you get some error message that is ```: cannot connect to X server```, <br>
-you should run with ```xvfb-run -a ./opencv-tesseract``` 
-<br><br>
-Then, you can get the result from it
+you should run with ```xvfb-run -a ./batter``` 
 
+<br><br>
+Then, you can get the result from it. <br>
+<br>
+If there are other problem about compiling and installing process, <br>
+let me know for emailing me. <br><br>
+
+limkim4233@ajou.ac.kr <br>
 
 <br>
 
