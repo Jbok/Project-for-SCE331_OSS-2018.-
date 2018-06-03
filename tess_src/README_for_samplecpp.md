@@ -1,7 +1,7 @@
 # How to Run recognition_name.cpp
-
+<br><br>
 Written by TaekLim Kim
-
+<br><br><br>
 
 ## Setting OpenCV & Tessearct
 
