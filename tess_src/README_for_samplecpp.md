@@ -4,7 +4,7 @@ Written by TaekLim Kim
 <br><br><br><br>
 
 ## Setting OpenCV & Tessearct
-
+* * *
 <br>
 You need to set OpenCV and Tesseract to run this source code. <br>
 It was tested on the Linux Ubuntu 16.04. Below websites are the references for building these SW. <br>
@@ -24,7 +24,7 @@ So, when we build OpenCV after installed Tesseract, there are dependency between
 
 I gave an Issue to OpenCV github Repository, about Building error between Tesseract API.<br><br>
 
-Issue on OpenCV Github: <https://github.com/opencv/opencv_contrib/issues/1636> <br>
+> Issue on OpenCV Github: <https://github.com/opencv/opencv_contrib/issues/1636> <br>
 
 <!--
 This part will be img and link of Issue on Github
@@ -38,7 +38,7 @@ To adapt c++11 version onto OpenCV build process, you should write a line of cod
 ```C++
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 ```
-<br><br>
+<br>
 
 And then, you can continue to building OpenCV process.<br>
 There will be no more problem about the confilict between c++11 Tesseract & OpenCV
@@ -46,7 +46,7 @@ There will be no more problem about the confilict between c++11 Tesseract & Open
 
 
 ## Compiling
-
+* * *
 ### Compile
 
 It should be compiled with c++11 because the tesseract only support the c++11 (not OpenCV)
@@ -63,9 +63,10 @@ After that, you can find the executable file <br><br>
 If you using the virtual machine or if you get some error message that is ```: cannot connect to X server```, <br>
 you should run with ```xvfb-run -a ./batter``` 
 
-<br><br>
-Then, you can get the result from it. <br>
 <br>
+Then, you can get the result from it. <br><br>
+<img src="/uploads/83823b78674b42af0606eeb79590a1cc/batter_result.png" width="50%" height="50%">
+<br><br>
 If there are other problem about compiling and installing process, <br>
 let me know for emailing me. <br><br>
 
