@@ -6,7 +6,7 @@ https://opencv.org/releases.html
 
 ## Linux 
 
-###1. Remove Opencv 2.4 Version
+### 1. Remove Opencv 2.4 Version
 
 ```
 $ pkg-config --modversion opencv
