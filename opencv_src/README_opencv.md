@@ -1,18 +1,14 @@
-opencv library download link for each OS
-
-https://opencv.org/releases.html
-
-#How to Install OpenCCV
+# How to Install OpenCCV
 
 ## Linux 
 
-### 0. Upgrade existing package
+#### 0. Upgrade existing package
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
-### 1. Remove Opencv 2.4 Version
+#### 1. Remove Opencv 2.4 Version
 
 Check whether OpenCV 2.4 Version is already installed or not
 ```
@@ -37,7 +33,7 @@ $ sudo apt-get purge libopencv* python-opencv
 $ sudo apt-get autoremove
 ```
 
-### 2. Install OpenCV package
+#### 2. Install OpenCV package
 ```
 $ sudo apt-get install build-essential cmake
 $ sudo apt-get install pkg-config
@@ -75,4 +71,4 @@ $ pkg-config --libs --cflags opencv
 
 ```
 
-
+.
