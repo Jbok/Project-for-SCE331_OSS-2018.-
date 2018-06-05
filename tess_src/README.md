@@ -10,8 +10,11 @@ You need to set OpenCV and Tesseract to run this source code. <br>
 It was tested on the Linux Ubuntu 16.04. Below websites are the references for building these SW. <br>
 
 <br>
-How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653> <br>
-How to build tesseract: <http://jybaek.tistory.com/620> <br>
+> How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653> <br><br>
+
+Also, you can refer the README.md written by Jbok.<br>
+
+> How to build tesseract: <http://jybaek.tistory.com/620> <br>
 <br>
 
 ### Issues while compiling and building OpenCV
