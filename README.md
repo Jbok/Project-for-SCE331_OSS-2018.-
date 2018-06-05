@@ -118,9 +118,8 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 
 > OpenCV: 작성 예정
 > <br><br>
-> Tessearact: 작성 예정
+> Tessearact: [Link][5] 
 
-<!--- [3]: http:// -->
 
 <br><br><br>
 ## **How to Execute**
@@ -193,7 +192,7 @@ This project is licensed under these open source licenses.
 [2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
 [3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/9
 [4]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/recognition_name.cpp
-
+[5]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/README.md
 
 <br><br><br>
 <!---
