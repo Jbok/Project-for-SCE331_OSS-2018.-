@@ -67,8 +67,7 @@ you should run with ```xvfb-run -a ./batter```
 Then, you can get the result from it. <br><br>
 <img src="/uploads/83823b78674b42af0606eeb79590a1cc/batter_result.png" width="50%" height="50%">
 <br><br>
-If there are other problem about compiling and installing process, <br>
-let me know for emailing me. <br><br>
+If there are other problem about compiling and installing process, let me know for emailing me. <br><br>
 
 limkim4233@ajou.ac.kr <br>
 
