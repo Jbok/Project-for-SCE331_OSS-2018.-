@@ -4,33 +4,37 @@ Created on Tue May  8 02:54:42 2018
 
 @author: bok
 """
-
+import sys
 import os
 import cv2
+import pathlib
+import shutil 
 
-###############################################################################
-# parameters defined by user
-PATH_TO_INPUT_VIDEO_PATH = '.\\sample_video\\'
-VIDEO_NAME = 'sample_2018'
-VIDEO_EXTENSION = '.mp4'
-PATH_TO_OUTPUT_IMAGES_DIR = '.\\sample_frame_image\\'
-###############################################################################
- 
-def main():
+def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
+
     # Create a VideoCapture object and read from input file
     # If the input is the camera, pass 0 instead of the video file name
-    cap = cv2.VideoCapture(PATH_TO_INPUT_VIDEO_PATH + VIDEO_NAME + VIDEO_EXTENSION)
-     
-    # Check if camera opened successfully
-    if (cap.isOpened()== False): 
+    
+    video_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), path_to_input_video)
+    cap = cv2.VideoCapture(video_path)
+    
+    video_name = os.path.split(video_path)[1]
+    video_name = os.path.splitext(video_name)[0]
+
+    path_to_output_video = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "tess_src","temp")
+
+    # Check if camera opened successfuly
+    if (cap.isOpened()== False):
         print("Error opening video stream or file")
-     
+        sys.exit(1)
     # Read until video is completed
     cnt = 0
     
+
+
     #make folder to save frame if there is no exisiting folder about video file
-    if not os.path.isdir(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME):
-       os.mkdir(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME)
+    if not os.path.isdir(path_to_output_video):
+       os.mkdir(path_to_output_video)
         
     
     while(cap.isOpened()):
@@ -44,8 +48,9 @@ def main():
             ##COLOR_BGR2GRAY
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
             
-            ##Calculate height and width of video
-            height, width = frame.shape[:2]
+            ##Calculate original height and width of video
+            height_origin, width_origin = frame.shape[:2]
+
             ##Resize frame to enhance recognition rate
             frame = cv2.resize(frame,(2000, 1000))
             
@@ -53,17 +58,17 @@ def main():
             height, width = frame.shape[:2]
             
             ##Calculate namespace pixel value by the ratio
-            x_left = int(width * (275/1000))
-            x_right = int(width * (340/1000))
-            y_top = int(height * (460/560))
-            y_bottom = int(height * (485/560))
+            x_left = int(width * (pixel_value_x[0]/width_origin))
+            x_right = int(width * (pixel_value_x[1]/width_origin))
+            y_top = int(height * (pixel_value_y[0]/height_origin))
+            y_bottom = int(height * (pixel_value_y[1]/height_origin))
             
             ##Cropping image frame[height, width]
             frame = frame[y_top:y_bottom, x_left:x_right]
           
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(PATH_TO_OUTPUT_IMAGES_DIR + VIDEO_NAME +'\\', 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(path_to_output_video, '%d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
@@ -77,7 +82,21 @@ def main():
      
     # When everything done, release the video capture object
     cap.release()
+
+
+    tess_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'tess_src')
+    os.chdir(tess_path)
+    os.system('g++ -std=c++11 recognition_name.cpp -o batter -llept -ltesseract')
+    os.system('./batter')
+
+    
+    #Remove temp frame saving files
+    shutil.rmtree('temp')
  
- 
+def main(filepath, x_left, x_right, y_bottom, y_top):
+     pixel_x = [int(x_left), int(x_right)]
+     pixel_y = [int(y_bottom), int(y_top)]
+     captureWordbyPixel(filepath, pixel_x, pixel_y)
+
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]) #main(filepath, x_left, x_right, y_bottom, y_top)
