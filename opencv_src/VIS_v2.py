@@ -94,7 +94,7 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
 def main():
     pixel_x = [275, 340]
     pixel_y = [460, 485]
-    captureWordbyPixel("sample_video\\sample_2018.mp4", pixel_x, pixel_y)
+    captureWordbyPixel("sample_video/sample_2018.mp4", pixel_x, pixel_y)
 
 if __name__ == '__main__':
     main()
