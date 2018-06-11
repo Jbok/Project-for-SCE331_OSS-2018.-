@@ -13,6 +13,8 @@ It was tested on the Linux Ubuntu 16.04. Below websites are the references for b
 There are reference about how to build OpenCV on JBok's Markdown file, so I only talk about the Tesseract. <br>
 Also, you can refer below sites for building OpenCV. <br>
 <br>
+> JBok's Reference for OpenCV: <http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/opencv.md>
+<br>
 > How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653>
 
 <br>
@@ -50,10 +52,13 @@ For testing the English and Korean recognition, you should download two files. <
 
 <br>
 **4. Test the Tesseract in Command Line**
+```
+tesseract image.png outputbase -l kor
+```
+Your image should be in the same directory as your current position. <br>
+While you enter that command line, you can checkout the recognition of the image letter.
 
-
-
-<br>
+<br><br>
 ### Issues while Compiling and Building OpenCV
 <br>
 There are some building error while we install OpenCV. <br><br>
