@@ -8,14 +8,6 @@ Created on Tue May  8 02:54:42 2018
 import os
 import cv2
 import pathlib
-
-###############################################################################
-# parameters defined by user
-# PATH_TO_INPUT_VIDEO_PATH = 'sample_video'
-# VIDEO_NAME = 'sample_2018.mp4'
-# PATH_TO_OUTPUT_IMAGES_DIR = 'sample_frame_image'
-
-###############################################################################
  
 def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
 
@@ -89,12 +81,18 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
      
     # When everything done, release the video capture object
     cap.release()
- 
- 
-def main():
-    pixel_x = [275, 340]
-    pixel_y = [460, 485]
-    captureWordbyPixel("sample_video\\sample_2018.mp4", pixel_x, pixel_y)
 
-if __name__ == '__main__':
-    main()
+
+    tess_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'tess_src')
+    os.chdir(tess_path)
+    os.system('g++ -std=c++11 recognition_name.cpp -o batter -llept -ltesseract')
+    os.system('./batter')
+ 
+ 
+# def main():
+#     pixel_x = [275, 340]
+#     pixel_y = [460, 485]
+#     captureWordbyPixel("sample_video\\sample_2018.mp4", pixel_x, pixel_y)
+
+# if __name__ == '__main__':
+#     main()
