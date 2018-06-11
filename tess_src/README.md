@@ -5,35 +5,54 @@ Written by TaekLim Kim
 
 ## Setting OpenCV & Tessearct
 * * *
-<br>
+
 ### OpenCV
 <br>
 You need to set OpenCV and Tesseract to run this source code. <br>
 It was tested on the Linux Ubuntu 16.04. Below websites are the references for building these SW. <br>
 There are reference about how to build OpenCV on JBok's Markdown file, so I only talk about the Tesseract. <br>
 Also, you can refer below sites for building OpenCV. <br>
-<br><br>
-> How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653> <br><br>
+<br>
+> How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653>
 
+<br>
 ### Tesseract
 <br>
 1. Install the Packages
-
-
+<br>
+```
+$ sudo apt-get install autoconf automake libtool 
+$ sudo apt-get install autoconf-archive 
+$ sudo apt-get install pkg-config 
+$ sudo apt-get install libpng12-dev 
+$ sudo apt-get install libjpeg8-dev 
+$ sudo apt-get install libtiff5-dev 
+$ sudo apt-get install zlib1g-dev
+$ sudo apt-get install libleptonica-dev
+```
 
 2. Download the Github source and Compile it
-
+```
+$ git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git 
+$ cd tesseract $ ./autogen.sh 
+$ ./configure --enable-debug 
+$ LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" make 
+$ sudo make install $ sudo ldconfig
+```
 
 3. Download Datafile(Korean, English..)
+
+There are github wiki on tesseract-ocr and you can download the Language Data files. <br>
+For testing the English and Korean recognition, you should download two files. <br>
+<br>
+
+> https://github.com/tesseract-ocr/tesseract/wiki/Data-Files
 
 
 4. Test the Tesseract in Command Line
 
-
-> How to build tesseract: <http://jybaek.tistory.com/620> <br>
 <br>
-
-### Issues while compiling and building OpenCV
+### Issues while Compiling and Building OpenCV
 <br>
 There are some building error while we install OpenCV. <br><br>
 
@@ -61,7 +80,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 And then, you can continue to building OpenCV process.<br>
 There will be no more problem about the confilict between c++11 Tesseract & OpenCV
-<br><br>
+<br><br><br><br>
 
 
 ## Compiling
@@ -88,8 +107,12 @@ Then, you can get the result from it. <br><br>
 <br><br>
 If there are other problem about compiling and installing process, let me know for emailing me. <br><br>
 
-limkim4233@ajou.ac.kr <br>
+limkim4233@ajou.ac.kr
+<br><br>
 
+### Reference site
+
+> <http://jybaek.tistory.com/620>
 <br>
 
 
