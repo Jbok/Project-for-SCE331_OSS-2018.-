@@ -1,7 +1,6 @@
 # How to Install OpenCCV
 <br><br>
-***
-* * *
+----------------------
 ## Linux 
 <br>
 **0. Upgrade existing package**
@@ -35,7 +34,7 @@ Then you should remove version 2.4.9.1.
 $ sudo apt-get purge libopencv* python-opencv
 $ sudo apt-get autoremove
 ```
-
+<br><br>
 **2. Install OpenCV package**
 <br>
 ```
