@@ -8,7 +8,8 @@ import sys
 import os
 import cv2
 import pathlib
- 
+import shutil 
+
 def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
 
     # Create a VideoCapture object and read from input file
@@ -19,9 +20,8 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
     
     video_name = os.path.split(video_path)[1]
     video_name = os.path.splitext(video_name)[0]
-    print(video_name)
 
-    path_to_output_video = os.path.join(os.path.dirname(os.path.realpath(__file__)), "sample_frame_image", video_name)
+    path_to_output_video = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "tess_src","temp")
 
     # Check if camera opened successfuly
     if (cap.isOpened()== False):
@@ -68,7 +68,7 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
           
             # Capture only 1/10 frame
             if (int(cap.get(1)) % 10 == 0):
-                OUTPUT_IMAGE_PATH = os.path.join(path_to_output_video, 'image_%09d.jpg' % (cnt/10))
+                OUTPUT_IMAGE_PATH = os.path.join(path_to_output_video, '%d.jpg' % (cnt/10))
                 print("Now %d-th images being processed..." % (cnt/10))
         
                 # save image
@@ -88,7 +88,10 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
     os.chdir(tess_path)
     os.system('g++ -std=c++11 recognition_name.cpp -o batter -llept -ltesseract')
     os.system('./batter')
- 
+
+    
+    #Remove temp frame saving files
+    shutil.rmtree('temp')
  
 def main(argv):
      pixel_x = [275, 340]

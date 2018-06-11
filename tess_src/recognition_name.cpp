@@ -7,6 +7,7 @@
 #include <tesseract/baseapi.h>
 #include <tesseract/publictypes.h>
 #include <leptonica/allheaders.h>
+#include <unistd.h>
 
 #define FILE_ 25 // Number of Frame Image files
 
@@ -17,6 +18,10 @@ int main()
   char *outText;
   string str_outArray[FILE_][1]; // String Array for Find the Recognition Word
   int flag[FILE_];
+
+  char curdir[1024];
+  chdir("./temp"); // Change Current Directory
+  getcwd(curdir, 1024); // Get Cuurent Directory Path
 
   tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
 
@@ -31,10 +36,13 @@ int main()
     api->Init("/usr/share/tesseract-ocr/tessdata", "kor");
 
     //string input_img = "/home/tlimkim/workspace/kbo/opencv_src/sample_frame_image/sample_2018/";
-    string input_img = "/home/tlimkim/workspace/kbo/image/sample_2018/"; // path for KIA Video
+    
+    //Change char[] -> string 
+    string input_img(curdir);
+
 
     string num = std::to_string(i); // for number of image file
-    input_img = input_img + num + ".jpg";
+    input_img = input_img + "/" + num + ".jpg";
     const char * str = input_img.c_str(); // String to char
 
     // Reading Image by 'str' path
