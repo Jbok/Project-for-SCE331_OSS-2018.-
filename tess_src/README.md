@@ -6,13 +6,29 @@ Written by TaekLim Kim
 ## Setting OpenCV & Tessearct
 * * *
 <br>
+### OpenCV
+<br>
 You need to set OpenCV and Tesseract to run this source code. <br>
 It was tested on the Linux Ubuntu 16.04. Below websites are the references for building these SW. <br>
-
-<br>
+There are reference about how to build OpenCV on JBok's Markdown file, so I only talk about the Tesseract. <br>
+Also, you can refer below sites for building OpenCV. <br>
+<br><br>
 > How to build OpenCV: <http://webnautes.tistory.com/1030?category=704653> <br><br>
 
-Also, you can refer the README.md written by Jbok.<br>
+### Tesseract
+<br>
+1. Install the Packages
+
+
+
+2. Download the Github source and Compile it
+
+
+3. Download Datafile(Korean, English..)
+
+
+4. Test the Tesseract in Command Line
+
 
 > How to build tesseract: <http://jybaek.tistory.com/620> <br>
 <br>
