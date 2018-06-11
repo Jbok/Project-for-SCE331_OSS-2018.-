@@ -18,7 +18,8 @@ Also, you can refer below sites for building OpenCV. <br>
 <br>
 ### Tesseract
 <br>
-1. Install the Packages
+
+**1. Install the Packages**
 <br>
 ```
 $ sudo apt-get install autoconf automake libtool 
@@ -30,8 +31,8 @@ $ sudo apt-get install libtiff5-dev
 $ sudo apt-get install zlib1g-dev
 $ sudo apt-get install libleptonica-dev
 ```
-
-2. Download the Github source and Compile it
+<br>
+**2. Download the Github source and Compile it**
 ```
 $ git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git 
 $ cd tesseract $ ./autogen.sh 
@@ -39,17 +40,18 @@ $ ./configure --enable-debug
 $ LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" make 
 $ sudo make install $ sudo ldconfig
 ```
-
-3. Download Datafile(Korean, English..)
+<br>
+**3. Download Datafile(Korean, English..)**
 
 There are github wiki on tesseract-ocr and you can download the Language Data files. <br>
 For testing the English and Korean recognition, you should download two files. <br>
-<br>
 
 > https://github.com/tesseract-ocr/tesseract/wiki/Data-Files
 
+<br>
+**4. Test the Tesseract in Command Line**
 
-4. Test the Tesseract in Command Line
+
 
 <br>
 ### Issues while Compiling and Building OpenCV
