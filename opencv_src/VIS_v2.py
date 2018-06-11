@@ -26,7 +26,7 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
     # Check if camera opened successfuly
     if (cap.isOpened()== False):
         print("Error opening video stream or file")
-     
+        sys.exit(1)
     # Read until video is completed
     cnt = 0
     
