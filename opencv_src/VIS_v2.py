@@ -4,7 +4,7 @@ Created on Tue May  8 02:54:42 2018
 
 @author: bok
 """
-
+import sys
 import os
 import cv2
 import pathlib
@@ -13,6 +13,7 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
 
     # Create a VideoCapture object and read from input file
     # If the input is the camera, pass 0 instead of the video file name
+    
     video_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), path_to_input_video)
     cap = cv2.VideoCapture(video_path)
     
@@ -89,10 +90,10 @@ def captureWordbyPixel(path_to_input_video, pixel_value_x, pixel_value_y):
     os.system('./batter')
  
  
-def main():
+def main(argv):
      pixel_x = [275, 340]
      pixel_y = [460, 485]
-     captureWordbyPixel("sample_video\\sample_2018.mp4", pixel_x, pixel_y)
+     captureWordbyPixel(argv, pixel_x, pixel_y)
 
 if __name__ == '__main__':
-     main()
+    main(sys.argv[0])
