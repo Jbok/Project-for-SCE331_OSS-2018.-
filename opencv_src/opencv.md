@@ -1,7 +1,9 @@
 # How to Install OpenCCV
-
+<br><br>
+***
+* * *
 ## Linux 
-
+<br>
 **0. Upgrade existing package**
 <br>
 ```
@@ -77,5 +79,5 @@ $ pkg-config --modversion opencv
 $ pkg-config --libs --cflags opencv
 
 ```
-
-.
+* * *
+***
