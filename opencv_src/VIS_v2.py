@@ -96,4 +96,4 @@ def main(argv):
      captureWordbyPixel(argv, pixel_x, pixel_y)
 
 if __name__ == '__main__':
-    main(sys.argv[0])
+    main(sys.argv[1])
