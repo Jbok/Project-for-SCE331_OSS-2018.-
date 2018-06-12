@@ -20,8 +20,15 @@ def main(filepath, x_left, x_right, y_bottom, y_top):
 ### Run
 I want to find sample_video/sample_2018.mp4's batter's name.<br>
 sample_2018.mp4's batter name's pixel value is [275, 340] [480, 485].<br>
->If you want to know the pixel value of the desired part, Refer to this document.<br>
->http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/openCV_example.md
+
+> If you want to know the pixel value of the desired part, Refer to this document.
+> http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/openCV_example.md
+<br>
+
+Commands form Linux are as follows
+```
+python3 findword.py sample_video/sample_2018.mp4 275 340 460 485
+```
 
 
 
