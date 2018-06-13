@@ -124,7 +124,7 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 <br><br><br>
 ## **How to Execute**
 * * *
-how to use API [Link][7]
+[how to use API][7]
 
 <br><br><br>
 ## **API Languages**
