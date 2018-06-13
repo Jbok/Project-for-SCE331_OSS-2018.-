@@ -70,7 +70,7 @@ OpenCV를 사용하여 영상을 프레임 별로 나눔과 동시에 우리가 
 
 <br>
 
-OpenCV를 이용하여 영상을 프레임과 원하는 위치만을 이미지로 저장하는 소스코드는 **VIS.py** 이며 실행 예제는 [openCV_example][2]에서 확인할 수 있다. <br><br>
+OpenCV를 이용하여 영상을 프레임과 원하는 위치만을 이미지로 저장하는 소스코드는 **findword.py** 이며 실행 예제는 [openCV_example][2]에서 확인할 수 있다. <br><br>
 
 또한 이렇게 원하는 위치만 이미지로 저장된 것을 가지고 해당 이미지에서 우리가 원하는 타자의 이름을 추출하려 하였다. <br>
 이를 위해 **_Tesseract_**를 사용하였고 해당 소스코드는 [recognition_name.cpp][4] 에 있다. <br><br>
@@ -188,7 +188,7 @@ This project is licensed under these open source licenses.
 
 <!---링크--->
 [1]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/3 "야구 중계채널별 선수 이름의 위치"
-[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/openCV_example.md
+[2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/openCV_example.md
 [3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/9
 [4]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/recognition_name.cpp
 [5]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/README.md
