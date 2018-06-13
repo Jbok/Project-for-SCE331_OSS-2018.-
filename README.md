@@ -124,8 +124,7 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 <br><br><br>
 ## **How to Execute**
 * * *
-
-API에 대한 개발 완료 시 작성
+how to use API [Link][7]
 
 <br><br><br>
 ## **API Languages**
@@ -194,6 +193,7 @@ This project is licensed under these open source licenses.
 [4]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/recognition_name.cpp
 [5]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/README.md
 [6]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/opencv.md
+[7]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/README.md
 <br><br><br>
 <!---
 #### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
