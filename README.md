@@ -10,7 +10,7 @@
 - Any improvements
 - Open Issues
 - Installation
-- How to Execute
+- How to use
 - API Languages
 - Licenses
 - Members
@@ -128,9 +128,9 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 
 
 <br><br><br>
-## **How to Execute**
+## **How to use**
 * * *
-[how to use API][7]
+[How to use API][7]
 
 <br><br><br>
 ## **API Languages**
@@ -197,9 +197,9 @@ This project is licensed under these open source licenses.
 [2]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/openCV_example.md
 [3]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/issues/9
 [4]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/recognition_name.cpp
-[5]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/README.md
-[6]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/opencv.md
-[7]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/README.md
+[5]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/tess_src/README.md "Tesseract 사용을 위한 설치법"
+[6]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/opencv.md "openCV 사용을 위한 설치법"
+[7]: http://git.ajou.ac.kr/open-source-2018-spring/kbo/blob/master/opencv_src/README.md "최종적으로 완성된 API 사용법"
 <br><br><br>
 <!---
 #### 2. 선수의 이름을 인식하여 DB로부터 정보를 가져온다.
