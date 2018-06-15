@@ -124,7 +124,7 @@ OpenCV, Tesseract 두 오픈소스 라이브러리를 사용하여 제작되었�
 
 > OpenCV: [Link][6]
 > <br><br>
-> Tessearact: [Link][5] 
+> Tesseract: [Link][5] 
 
 
 <br><br><br>
